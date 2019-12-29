@@ -15,6 +15,10 @@ namespace XNodeEditor {
             if (GUILayout.Button("Edit graph", GUILayout.Height(40))) {
                 NodeEditorWindow.Open(serializedObject.targetObject as XNode.NodeGraph);
             }
+
+            GUILayout.Space(EditorGUIUtility.singleLineHeight);
+            GUILayout.Label("Raw data", "BoldLabel");
+
             base.OnInspectorGUI();
         }
     }
@@ -46,6 +50,10 @@ namespace XNodeEditor {
                 NodeEditorWindow w = NodeEditorWindow.Open(graphProp.objectReferenceValue as XNode.NodeGraph);
                 w.Home(); // Focus selected node
             }
+
+            GUILayout.Space(EditorGUIUtility.singleLineHeight);
+            GUILayout.Label("Raw data", "BoldLabel");
+
             base.OnInspectorGUI();
         }
     }
